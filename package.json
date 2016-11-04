@@ -1,0 +1,27 @@
+{
+  "name": "thecandyblogger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonras82/thecandyblogger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasonras82/thecandyblogger/issues"
+  },
+  "homepage": "https://github.com/jasonras82/thecandyblogger#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "massive": "^2.5.0"
+  }
+}
