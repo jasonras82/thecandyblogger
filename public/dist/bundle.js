@@ -42,30 +42,9 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _app = __webpack_require__(1);
-
-	console.log(_app.animal); // import './src/app';
-	//
-	// let animal = 'giraffe';
-
-/***/ },
-/* 1 */
 /***/ function(module, exports) {
 
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	// import './zebra';
-	//
-	// console.log('app');
-
-	// var animal = exports.animal = 'hippo';
+	"use strict";
 
 /***/ }
 /******/ ]);

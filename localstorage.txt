@@ -1,0 +1,6 @@
+localStorage.setItem();
+localStorage.setItem('testing', JSON.stringify({some: 'value'}));
+// turns it into a JSON string
+localStorage.getItem();
+JSON.parse(localStorage.getItem('testing'));
+// turns it back into an object

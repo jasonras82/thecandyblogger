@@ -1,7 +1,7 @@
 let db = require('./../nodejs/db');
 module.exports = {
   getProducts(req, res) {
-    db.products.products.read_products([], (err, response) => {
+    db.products.read_products([], (err, response) => {
       res.status(200).json(response);
     })
   },

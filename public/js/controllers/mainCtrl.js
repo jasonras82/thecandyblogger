@@ -1,5 +1,9 @@
-angular.module('app').controller('productsCtrl', function($scope) {
+angular.module('app').controller('productsCtrl', function($scope, productsService) {
+
   $scope.testing = 'hey hey hey!';
-  console.log($scope);
-  // console.log(testing);
+
+  productsService.getProducts()
+  .then((data) => {
+    $scope.products = data;
+  });
 });
