@@ -5,6 +5,7 @@ let express = require('express'),
     mainCtrl = require('./mainCtrl'),
     port = 8008;
 
+app.use(express.static(`${__dirname}/public`));
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -15,13 +16,7 @@ app.post('/api/product', mainCtrl.productsCtrl.addProduct);
 app.put('/api/product/:id', mainCtrl.productsCtrl.updateProduct);
 app.delete('/api/product/:id', mainCtrl.productsCtrl.removeProduct);
 
-// POST
-
-
-// PUT
-
-
-// DELETE
+// Cart
 
 
 
