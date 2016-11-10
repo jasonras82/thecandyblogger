@@ -1,6 +1,6 @@
 angular.module('app').controller('productsCtrl', function($scope, productsService) {
 
-  $scope.testing = 'hey hey hey!';
+  $scope.test = 'hey hey hey!';
 
   productsService.getProducts()
   .then((data) => {
