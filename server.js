@@ -4,11 +4,22 @@ let express = require('express'),
     bodyParser = require('body-parser'),
     session = require('express-session'),
     reload = require('express-livereload'),
+    // cookieParser
+    // passport
+    // passport-local
+    // passport-facebook
+    // config file (with secret and fb id/secret. add them to my .gitignore)
+    // jsonwebtoken (jwt)
+    // bcrypt local auth password hasing
     mainCtrl = require('./mainCtrl'),
     port = 8008;
 
 app.use(bodyParser.json());
 app.use(cors());
+// cookieParser
+// passport.initialize
+// passport.XX
+
 
 // give me the public/index.html
 app.use(express.static(`${__dirname}/public`));

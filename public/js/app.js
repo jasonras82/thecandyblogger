@@ -1,4 +1,4 @@
-angular.module('app', ['ui-router'])
+angular.module('app', ['ui.router'])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
@@ -7,7 +7,8 @@ angular.module('app', ['ui-router'])
       })
       .state('products', {
         url: '/products',
-        templateUrl: '../view/products.html',
+        // template: 'hello',
+        templateUrl: '../views/products.html',
         controller: 'productsCtrl',
         controllerAs: 'vm'
       })
