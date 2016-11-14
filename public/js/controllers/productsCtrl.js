@@ -6,5 +6,10 @@ angular.module('app').controller('productsCtrl', function($scope, productsServic
   .then((data) => {
     $scope.products = data;
   });
-  
+
+  productsService.getProduct()
+  .then((data) => {
+    $scope.product = data;
+  });
+
 });

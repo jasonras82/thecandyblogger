@@ -10,33 +10,85 @@ body {
   margin: 0;
   padding: 0;
   height: 200vh;
+  /*width: 100vw;*/
+  /*top: 68px;*/
+}
+
+[ng-click], [ui-sref] {
+  cursor: pointer;
+}
+
+/*.container {
+  padding: 0px;
+  left: 0;
+  right: 0;
+}*/
+
+.page-header {
+  top: 0;
+  left: 0;
+  padding-top: 5px;;
+  /*font-family: 'Alegreya Sans', sans-serif;*/
+  font-family: 'Josefin Slab', serif;
+  font-weight:400;
+  width: 100%;
+  /*height: 68px;*/
+  position: fixed;
+  background-color: rgba(228, 237, 242, 0.75);
+  /*border: 1px solid white;*/
+  margin: 0px;
+  /*-webkit-transform: translateZ(0);*/
+  -webkit-transform: translateZ(0);
+  z-index: 1;
+}
+
+.brand {
+  /*height: 100%;*/
+  padding-left: 30px;
+  font-size: 46px;
+  margin: auto;
 }
 
 .hero {
   width: 100%;
-  top: 68px;
+  /*top: 68px;*/
   height: 100vh;
-  background-image: url(images/new3.jpg);
+  background-image: url(images/product-images/new3.jpg);
   background-size: cover;
-  background-position: center center;
-  overflow: hidden;
-  position: relative;;
+  /*background-position: center center;*/
+  /*overflow: hidden;*/
+  /*position: relative;*/
 }
 
-header {
-  font-family: Comfortaa, cursive;
-  width: 100%;
-  height: 68px;
-  position: fixed;
-  background-color: #E4EDF2;
-  border: 1px solid white;
-  z-index: 1;
-}
-.containter {
-  opacity: 0.5;
+.navbar-icons {
+  /*height: 34px;
+  width: 34px;*/
+  font-size: 28px;
+  text-align: center;
+  align-items: center;
+  height: 100%;
 }
 
-.brand {
-  padding-left: 30px;
-  font-size: 46px;
+/*img .navbar-icons {
+  color: red;
+}*/
+
+.navbar-icons:hover {
+  color: lightblue;
+}
+
+.product-list {
+  margin-top: 100px;
+  list-style-type: none;
+  text-align: center;
+  vertical-align: top;
+  font-family: 'Josefin Slab', serif;
+  font-weight: 700;
+  /*display: inline-block;*/
+  /*padding: 0;*/
+}
+
+.product-image {
+  max-width: 350px;
+  max-height: 350px;
 }

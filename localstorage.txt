@@ -11,4 +11,4 @@ oauth - passport login without a social channel
 local auth: look up hasing for local auth, you stored a hashed version of their password and when they go to login again, if it's the correct password, it's correct. It's only one way. bcrypt
 
 
-Search | Brand-home | Shop, Blog, About, Contact, Account, Cart
+Search | Brand-home | Shop, XBlog, XAbout, XContact, XPress, Account, Cart

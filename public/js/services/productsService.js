@@ -7,4 +7,13 @@ angular.module('app').service('productsService', function($http, $q) {
       return response.data;
     });
   };
+
+  this.getProduct = function() {
+    return $http.get(
+      'api/product/:id'
+    ).then(response => {
+      console.log(response.data);
+      return response.data;
+    })
+  }
 });
