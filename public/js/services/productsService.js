@@ -3,16 +3,15 @@ angular.module('app').service('productsService', function($http, $q) {
     return $http.get(
       '/api/products'
     ).then(response => {
-      // console.log(response.data);
+      console.log(response.data);
       return response.data;
     });
   };
 
-  this.getProduct = function() {
+  this.getProduct = function(id) {
     return $http.get(
-      '/api/product/:id'
+      `/api/product/${id}`
     ).then(response => {
-      console.log(response.data);
       return response.data;
     })
   }

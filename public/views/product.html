@@ -1,4 +1,14 @@
-{{ products.description }}
-Testing
-
-<img ng-src="{{ products.image }}" alt="" />
+<div class="container-fluid">
+  <div class="row top-margin">
+    <div class="col-md-6">
+      <img ng-src="{{ product.image }}" alt="{{ product.name }}" class="productpage-image"/>
+    </div>
+    <div class="col-md-6 product-description">
+      <h3>{{ product.name }}</h3>
+      <p>
+        {{ product.description }}
+        {{ product.price }}
+      </p>
+    </div>
+  </div>
+</div>

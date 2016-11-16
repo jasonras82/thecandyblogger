@@ -20,8 +20,8 @@ create table customer (
 
 create table orders (
   order_id serial primary key not null,
-  date timestamp not null,
-  total_price money not null,
+  date timestamp,
+  total_price money,
   quantity int,
   customer_id int references customer(customer_id)
 );

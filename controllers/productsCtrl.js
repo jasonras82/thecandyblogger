@@ -4,13 +4,13 @@ module.exports = {
   getProducts(req, res) {
     db.products.read_products([], (err, response) => {
       res.status(200).json(response);
-    })
+    });
   },
   getProduct(req, res) {
     db.products.read_product([req.params.id], (err, response) => {
       // console.log(req.params.id);
-      res.status(200).json(response);
-    })
+      res.status(200).json(response[0]);
+    });
   },
   addProduct(req, res) {
     let newProduct = req.body;
