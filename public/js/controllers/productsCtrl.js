@@ -1,4 +1,4 @@
-angular.module('app').controller('productsCtrl', function($scope, productsService) {
+angular.module('app').controller('productsCtrl', function($scope, $state, $log, productsService) {
 
   // $scope.test = 'hey hey hey!';
 
@@ -9,7 +9,15 @@ angular.module('app').controller('productsCtrl', function($scope, productsServic
 
   productsService.getProduct()
   .then((data) => {
-    $scope.product = data;
+    // let product = data;
+    console.log($state.params.id);
+    for(var i = 0; i < data.length; i++) {
+      if(data[i].id === $state.params.id) {
+        console.log(data[i]);
+        $scope.products = data[i];
+      }
+    }
+    console.log(data[i]);
   });
 
 });

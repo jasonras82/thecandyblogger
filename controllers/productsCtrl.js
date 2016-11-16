@@ -1,4 +1,5 @@
 let db = require('./../nodejs/db');
+
 module.exports = {
   getProducts(req, res) {
     db.products.read_products([], (err, response) => {
@@ -7,6 +8,7 @@ module.exports = {
   },
   getProduct(req, res) {
     db.products.read_product([req.params.id], (err, response) => {
+      // console.log(req.params.id);
       res.status(200).json(response);
     })
   },
