@@ -1,4 +1,4 @@
-let db = require('./../nodejs/db');
+let db = require('./../db');
 
 module.exports = {
   getProducts(req, res) {
