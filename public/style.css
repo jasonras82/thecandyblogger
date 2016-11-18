@@ -45,6 +45,12 @@ body {
 
 .navbar-color {
   background-color: rgba(228, 237, 242, 0.75);
+  /*background-color: rgba(149, 237, 226, 0.75);*/
+}
+
+.hamburger-color {
+  /*background-color: rgba(149, 237, 226, 0.9);*/
+  background-color: rgb(228, 237, 242);
 }
 
 .navbar-height {
@@ -56,6 +62,19 @@ body {
   padding-left: 30px;
   font-size: 40px;
   padding-top: 20px;
+}
+
+@media (max-width: 420px) {
+  .brand {
+    font-size: 30px;
+
+  }
+}
+
+@media (max-width: 340px) {
+  .brand {
+    font-size: 28px;
+  }
 }
 
 .hero {
@@ -90,7 +109,7 @@ body {
 }
 
 .top-margin {
-  margin-top: 150px;
+  margin-top: 80px;
 }
 
 .product-list {
@@ -100,6 +119,7 @@ body {
   vertical-align: top;
   font-family: 'Josefin Slab', serif;
   font-weight: 700;
+  padding-left: 0px;
   /*display: inline-block;*/
   /*padding: 0;*/
 }
