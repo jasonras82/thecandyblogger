@@ -1,14 +1,16 @@
 <div class="container-fluid">
   <div class="row top-margin">
+    <div class="col-md-1"></div>
     <div class="col-md-6">
       <img ng-src="{{ product.image }}" alt="{{ product.name }}" class="productpage-image"/>
     </div>
-    <div class="col-md-6 product-description">
-      <h3>{{ product.name }}</h3>
-      <p>
+    <div class="col-md-4 product-name">
+      <h1>{{ product.name }}</h1>
+      <p class="product-description">
         {{ product.description }}
-        {{ product.price }}
       </p>
+      <h2 class="product-price">{{ product.price }}</h2>
     </div>
+    <div class="col-md-1"></div>
   </div>
 </div>
