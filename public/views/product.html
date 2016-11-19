@@ -9,7 +9,10 @@
       <p class="product-description">
         {{ product.description }}
       </p>
-      <h2 class="product-price">{{ product.price }}</h2>
+      <div class="price-button row">
+        <button class="btn btn-default add-to-cart col-lg-8 col-xs-8" type="button" ng-click="addToCart(product)">add to cart</button>
+        <h2 class="product-price col-lg-4 col-xs-4">{{ product.price }}</h2>
+      </div>
     </div>
     <div class="col-md-1"></div>
   </div>

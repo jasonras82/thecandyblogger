@@ -3,7 +3,7 @@ angular.module('app').service('productsService', function($http, $q) {
     return $http.get(
       '/api/products'
     ).then(response => {
-      console.log(response.data);
+      // console.log(response.data);
       return response.data;
     });
   };
@@ -14,5 +14,13 @@ angular.module('app').service('productsService', function($http, $q) {
     ).then(response => {
       return response.data;
     })
+  }
+
+  let cart = [];
+
+  this.addToCart = function(product) {
+    console.log(product);
+    cart.push(product);
+    console.log(cart);
   }
 });

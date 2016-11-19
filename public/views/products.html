@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <ul class="row product-list top-margin">
-    <li class="col-lg-3 col-md-4 col-sm-6" ng-repeat="product in products">
+    <li class="col-md-4" ng-repeat="product in products | orderBy: products.name">
       <a ui-sref="product({id: product.product_id})" href="#/product/"><img ng-src="{{ product.image }}" class="product-image"/>
       <h3 class="">{{ product.name }}</h3>
       </a>

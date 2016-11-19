@@ -67,7 +67,6 @@ body {
 @media (max-width: 420px) {
   .brand {
     font-size: 30px;
-
   }
 }
 
@@ -141,8 +140,23 @@ body {
 .product-description {
   text-align: left;
   border-top: solid lightblue 1px;
+  border-bottom: solid lightblue 1px;
+  padding: 15px 0px;
+}
+
+.price-button {
+  margin: 0 auto;
 }
 
 .product-price {
+  margin: 0 auto;
+  margin-top: 2px;
+}
 
+.add-to-cart {
+  background-color: rgb(228, 237, 242);
+}
+
+.add-to-cart:hover {
+  background-color: lightblue;
 }

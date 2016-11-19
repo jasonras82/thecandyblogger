@@ -14,4 +14,8 @@ angular.module('app').controller('productsCtrl', function($scope, $state, $log, 
     });
   }
 
+  $scope.addToCart = function(product) {
+    productsService.addToCart(product);
+  }
+
 });

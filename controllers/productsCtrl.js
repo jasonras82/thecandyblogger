@@ -20,11 +20,11 @@ module.exports = {
   },
   updateProduct(req, res) {
     for(let key in req.body) {
-      console.log(req.body);
-      console.log(key);
-      console.log(req.body[key]);
-      console.log(req.params.id);
-      console.log(typeof req.body[key]);
+      // console.log(req.body);
+      // console.log(key);
+      // console.log(req.body[key]);
+      // console.log(req.params.id);
+      // console.log(typeof req.body[key]);
       let sql;
       if(typeof req.body[key] === 'string') {
         sql = `update products set ${key}='${req.body[key]}' where product_id=${req.params.id}`;
