@@ -1,4 +1,4 @@
-angular.module('app', ['ui.router'])
+angular.module('app', ['ui.router', 'ngStorage'])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
@@ -39,7 +39,9 @@ angular.module('app', ['ui.router'])
       })
       .state('cart', {
         url: '/cart',
-        templateUrl: '../views/cart.html'
+        templateUrl: '../views/cart.html',
+        controller: 'cartCtrl',
+        controllerAs: 'vm'
       })
 
     $urlRouterProvider

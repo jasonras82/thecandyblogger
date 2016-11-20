@@ -43,6 +43,7 @@ create table products (
   price money,
   image varchar(200),
   description varchar(400),
+  active boolean,
   product_category_id int
 );
 

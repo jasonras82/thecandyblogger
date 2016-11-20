@@ -1,1 +1,11 @@
-cart
+<div class="cart-hero"></div>
+<div class="container-fluid">
+  <div class="row">
+    <ul>
+      <li ng-repeat="item in cart">
+        <img class="product-image" ng-src="{{ item.image }}" alt="{{ item.name }}" />{{ item.name }}
+      </li>
+    </ul>
+  </div>
+</div>
+test
