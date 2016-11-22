@@ -3,7 +3,6 @@ angular.module('app').service('productsSvc', function($http, $q) {
     return $http.get(
       '/api/products'
     ).then(response => {
-      // console.log(response.data);
       return response.data;
     });
   };
@@ -16,43 +15,39 @@ angular.module('app').service('productsSvc', function($http, $q) {
     })
   }
 
-  this.cart = [];
-  let quantity = 1;
-
   this.addToCart = function(product) {
-    // console.log(cart);
-    // console.log(product.product_id);
-    // if(!cart) {
-    //   let cart = [];
-    // }
-    if(cart === []) {
-      cart.push(product);
+    if(!this.cart) {
+      this.cart = [];
+      this.cart.push(product);
       console.log(product);
-      console.log(cart);
+      console.log(this.cart);
     }
+
     else {
-      console.log(cart);
-      for(var i = 0; i < cart.length; i++) {
-        if(cart[i].product_id === product.product_id) {
-          console.log(cart[i]);
+      let added = false;
+      for(let i = 0; i < this.cart.length; i++) {
+        if(this.cart[i].product_id === product.product_id) {
+          console.log(this.cart[i]);
           if (!product.quantity) {
             product.quantity = 2;
+            console.log(product.quantity);
+            added = true;
           }
           else {
             product.quantity++;
+            console.log(product.quantity);
+            added = true;
           }
         }
-        else {
-          cart.push(product);
-        }
+      }
+      if(added === false) {
+        console.log(product);
+        this.cart.push(product);
+        console.log(this.cart);
       }
     }
-    // console.log(product);
-    // console.log(cart);
-    return cart;
+    console.log(this.cart);
+    return this.cart;
   }
 
-  // this.getCart = function() {
-  //   return cart;
-  // }
 });

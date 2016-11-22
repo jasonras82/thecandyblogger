@@ -14,14 +14,18 @@ angular.module('app').controller('productsCtrl', function($scope, $state, $local
     });
   }
 
-  $scope.cart = productsSvc.cart;
+  // if(!$localStorage.cart) {
+  //   $localStorage.cart = productsSvc.cart;
+  //   console.log($localStorage.cart);
+  //   $scope.cart = $localStorage.cart;
+  //   console.log($scope.cart);
+  // }
 
   $scope.addToCart = function(product) {
-      $localStorage.cart = productsSvc.addToCart(product);
-      // $localStorage.cart = cart;
-    // console.log(product);
-    // console.log($localStorage.cart);
+    $scope.cart = productsSvc.addToCart(product);
+    $localStorage.cart = $scope.cart;
   };
+
 
   // $scope.getCart = function() {
   //   $scope.cart = $localStorage.cart;

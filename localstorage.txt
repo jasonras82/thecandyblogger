@@ -12,3 +12,9 @@ local auth: look up hasing for local auth, you stored a hashed version of their 
 
 
 Search | Brand-home | Shop, XBlog, XAbout, XContact, XPress, Account, Cart
+
+To-dos:
+- add border and shadow to images
+- Mimic some of talon's homepage experience
+- Mobile views on all pages
+- Make hover color match the stripes
