@@ -204,3 +204,42 @@ body {
   padding-top: 125px;
   font-size: 60px;
 }
+
+.cart-header {
+  text-align: center;
+  /*display: flex;
+  justify-content: flex-start;
+  align-items: center;*/
+}
+
+.cart-header * {
+  margin: 0 auto;
+
+  /*margin-top: 10px;*/
+}
+
+.cart-container {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-container * {
+  text-align: center;
+}
+
+.cart-product > img {
+  max-width: 225px;
+  max-height: 225px;
+  object-fit: contain;
+  /*width: auto;
+  max-height: 250px;*/
+  padding: 10px;
+}
+
+.cart-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

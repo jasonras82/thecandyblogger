@@ -19,6 +19,7 @@ angular.module('app').service('productsSvc', function($http, $q) {
     if(!this.cart) {
       this.cart = [];
       this.cart.push(product);
+      product.quantity = 1;
       console.log(product);
       console.log(this.cart);
     }
@@ -46,6 +47,7 @@ angular.module('app').service('productsSvc', function($http, $q) {
         console.log(this.cart);
       }
     }
+    product.subtotal = product.price * product.quantity;
     console.log(this.cart);
     return this.cart;
   }
