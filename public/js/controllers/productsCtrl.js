@@ -26,7 +26,6 @@ angular.module('app').controller('productsCtrl', function($scope, $state, $local
     $localStorage.cart = $scope.cart;
   };
 
-
   // $scope.getCart = function() {
   //   $scope.cart = $localStorage.cart;
   // }

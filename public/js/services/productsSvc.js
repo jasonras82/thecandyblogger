@@ -20,35 +20,35 @@ angular.module('app').service('productsSvc', function($http, $q) {
       this.cart = [];
       this.cart.push(product);
       product.quantity = 1;
-      console.log(product);
-      console.log(this.cart);
+      // console.log(product);
+      // console.log(this.cart);
     }
 
     else {
       let added = false;
       for(let i = 0; i < this.cart.length; i++) {
         if(this.cart[i].product_id === product.product_id) {
-          console.log(this.cart[i]);
+          // console.log(this.cart[i]);
           if (!product.quantity) {
             product.quantity = 2;
-            console.log(product.quantity);
+            // console.log(product.quantity);
             added = true;
           }
           else {
             product.quantity++;
-            console.log(product.quantity);
+            // console.log(product.quantity);
             added = true;
           }
         }
       }
       if(added === false) {
-        console.log(product);
+        // console.log(product);
         this.cart.push(product);
-        console.log(this.cart);
+        // console.log(this.cart);
       }
     }
     product.subtotal = product.price * product.quantity;
-    console.log(this.cart);
+    // console.log(this.cart);
     return this.cart;
   }
 

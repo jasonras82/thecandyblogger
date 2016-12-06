@@ -22,7 +22,7 @@
         <div class="col-md-1 cart-price">${{ item.price }}</div>
         <h4 class="col-md-1 cart-quantity">{{ item.quantity }}</h4>
         <div class="col-md-1 cart-subtotal">${{ item.subtotal.toFixed(2) }}</div>
-        <div ng-click="removeItem()" class="col-md-1 cart-remove-item">X</div>
+        <div ng-click="removeItem(item)" class="col-md-1 cart-remove-item">X</div>
         <div class="col-md-1"></div>
       </li>
     </ul>
