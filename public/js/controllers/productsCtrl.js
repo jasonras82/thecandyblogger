@@ -1,6 +1,4 @@
-angular.module('app').controller('productsCtrl', function($scope, $state, $localStorage, $sessionStorage, $log, productsSvc) {
-
-  // $scope.test = 'hey hey hey!';
+angular.module('app').controller('productsCtrl', function($scope, $state, $localStorage, $sessionStorage, $log, productsSvc, cartSvc) {
 
   productsSvc.getProducts()
   .then((data) => {
@@ -14,24 +12,8 @@ angular.module('app').controller('productsCtrl', function($scope, $state, $local
     });
   }
 
-  // if(!$localStorage.cart) {
-  //   $localStorage.cart = productsSvc.cart;
-  //   console.log($localStorage.cart);
-  //   $scope.cart = $localStorage.cart;
-  //   console.log($scope.cart);
-  // }
-
   $scope.addToCart = function(product) {
-    $scope.cart = productsSvc.addToCart(product);
+    $scope.cart = cartSvc.addToCart(product);
     $localStorage.cart = $scope.cart;
   };
-
-  // $scope.getCart = function() {
-  //   $scope.cart = $localStorage.cart;
-  // }
-
-  // $scope.addToCart = function(product) {
-  //   productsSvc.addToCart(product);
-  // };
-
 });
