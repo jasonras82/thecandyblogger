@@ -12,7 +12,7 @@ let express = require('express'),
     // jsonwebtoken (jwt)
     // bcrypt local auth password hasing
     mainCtrl = require('./mainCtrl'),
-    port = 80;
+    port = process.env.PORT || 80;
 
 app.use(bodyParser.json());
 app.use(cors());
