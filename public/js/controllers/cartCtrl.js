@@ -7,9 +7,6 @@ angular.module('app').controller('cartCtrl', function($scope, $sessionStorage, c
   $scope.getCart();
 
   $scope.removeItem = (item) => {
-    console.log(item);
-    console.log($localStorage.cart);
-    console.log($scope.cart);
     $scope.cart = cartSvc.removeItem(item, $scope.cart);
   }
 
