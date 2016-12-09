@@ -1,4 +1,4 @@
-angular.module('app').controller('productsCtrl', function($scope, $state, $localStorage, $sessionStorage, $log, productsSvc, cartSvc) {
+angular.module('app').controller('productsCtrl', function($scope, $state, $sessionStorage, $log, productsSvc, cartSvc) {
 
   productsSvc.getProducts()
   .then((data) => {
@@ -14,6 +14,5 @@ angular.module('app').controller('productsCtrl', function($scope, $state, $local
 
   $scope.addToCart = function(product) {
     $scope.cart = cartSvc.addToCart(product);
-    $localStorage.cart = $scope.cart;
   };
 });

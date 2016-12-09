@@ -2,10 +2,10 @@
   <h1>shop</h1>
 </div>
 <div class="container-fluid">
-  <ul class="row product-list top-margin">
-    <li class="col-md-4" ng-repeat="product in products | orderBy: products.name">
-      <a ui-sref="product({id: product.product_id})" href="#/product/"><img ng-src="{{ product.image }}" class="product-image"/>
-      <h3 class="">{{ product.name }}</h3>
+  <ul class="row productspage-list top-margin">
+    <li class="col-md-4 productspage-image-title" ng-repeat="product in products | orderBy: products.name">
+      <a ui-sref="product({id: product.product_id})" href="#/product/"><img class="productspage-image" ng-src="{{ product.image }}"/>
+      <h3 class="productspage-title">{{ product.name }}</h3>
       </a>
     </li>
   </ul>

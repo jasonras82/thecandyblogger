@@ -1,7 +1,14 @@
 angular.module('app').service('cartSvc', function ($http, $q, $localStorage) {
 
-  this.cart = [];
+// create the cart
+  if(!$localStorage.cart) {
+    this.cart = [];
+  }
+  else{
+    this.cart = $localStorage.cart;
+  }
 
+// add an item to the cart
   this.addToCart = function(product) {
     let foundProduct = this.cart.find((cartItem) => {
       return cartItem.product_id === product.product_id;
@@ -13,13 +20,16 @@ angular.module('app').service('cartSvc', function ($http, $q, $localStorage) {
     else {
       foundProduct.quantity++;
     }
-    product.subtotal = product.price * product.quantity;
+    $localStorage.cart = this.cart;
     return this.cart;
   }
 
+// remove an item from the cart
   this.removeItem = (item, cart) => {
-    return cart.filter(product => {
+    let updatedCart = cart.filter(product => {
       return product.product_id != item.product_id
     });
+    $localStorage.cart = updatedCart;
+    return updatedCart;
   }
 });

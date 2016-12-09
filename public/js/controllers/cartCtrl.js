@@ -1,7 +1,7 @@
-angular.module('app').controller('cartCtrl', function($scope, $localStorage, $sessionStorage, cartSvc) {
+angular.module('app').controller('cartCtrl', function($scope, $sessionStorage, cartSvc) {
 
-  $scope.getCart = function() {
-    $scope.cart = $localStorage.cart;
+  $scope.getCart = () => {
+    $scope.cart = cartSvc.cart;
   }
 
   $scope.getCart();
@@ -10,7 +10,12 @@ angular.module('app').controller('cartCtrl', function($scope, $localStorage, $se
     console.log(item);
     console.log($localStorage.cart);
     console.log($scope.cart);
-    $localStorage.cart = cartSvc.removeItem(item, $scope.cart);
-    $scope.cart = $localStorage.cart;
+    $scope.cart = cartSvc.removeItem(item, $scope.cart);
+  }
+
+  $scope.getSubtotal = () => {
+    return $scope.cart.reduce((previous, current) => {
+      return previous + current.price * current.quantity;
+    }, 0);
   }
 });
