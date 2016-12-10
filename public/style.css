@@ -291,6 +291,10 @@ body {
   padding: 4px 0px;
 }
 
+.cart-buttons * {
+  margin-bottom: 16px;
+}
+
 .cart-subtotals {
   display: flex;
   justify-content: space-between;
