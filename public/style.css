@@ -14,7 +14,7 @@ body {
   /*top: 68px;*/
   font-family: 'Josefin Slab', serif;
   font-size: 18px;
-  
+
 }
 
 [ng-click], [ui-sref] {
@@ -270,4 +270,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+
+.cart-empty {
+  text-align: center;
+  padding-top: 5%;
+}
+
+.cart-empty button {
+  font-size: 18px;
+  margin-top: 2%;
 }

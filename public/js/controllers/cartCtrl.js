@@ -8,6 +8,7 @@ angular.module('app').controller('cartCtrl', function($scope, $sessionStorage, c
 
   $scope.removeItem = (item) => {
     $scope.cart = cartSvc.removeItem(item, $scope.cart);
+    checkCartLength();
   }
 
   $scope.getSubtotal = () => {
@@ -15,4 +16,7 @@ angular.module('app').controller('cartCtrl', function($scope, $sessionStorage, c
       return previous + current.price * current.quantity;
     }, 0);
   }
+
+  $scope.cartStatus = cartSvc.cartStatus;
+
 });

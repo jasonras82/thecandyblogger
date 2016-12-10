@@ -40,9 +40,9 @@ alter table order_details
 create table products (
   product_id serial primary key not null,
   name varchar(200),
-  price numberic(7, 2),
+  price numeric(7, 2),
   image varchar(200),
-  description varchar(400),
+  description varchar(800),
   active boolean,
   product_category_id int
 );
