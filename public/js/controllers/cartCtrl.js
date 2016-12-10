@@ -15,4 +15,10 @@ angular.module('app').controller('cartCtrl', function($scope, $sessionStorage, c
       return previous + current.price * current.quantity;
     }, 0);
   }
+
+  $scope.getTotal = () => {
+    return $scope.cart.reduce((previous, current) => {
+      return previous + current.price * current.quantity;
+    }, 0);
+  }
 });

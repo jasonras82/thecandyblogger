@@ -1,9 +1,12 @@
 <div class="top-hero vs9">
   <h1>cart</h1>
 </div>
+
 <div class="container-fluid cart-full" ng-if="cart.length > 0">
+
   <div class="row cart-header top-margin">
     <div class="col-md-1"></div>
+    <!-- <div class="col-md-3"></div> -->
     <h2 class="col-md-6">product</h2>
     <h3 class="col-md-1">price</h3>
     <h3 class="col-md-1">qty</h3>
@@ -11,6 +14,7 @@
     <h3 class="col-md-1"></h3>
     <div class="col-md-1"></div>
   </div>
+
   <ul class="row">
     <li ng-repeat="item in cart" class="cart-container row">
       <div class="col-md-1"></div>
@@ -25,28 +29,31 @@
       <div class="col-md-1"></div>
     </li>
   </ul>
+
   <div class="cart-bottom row">
     <div class="col-md-1"></div>
     <button class="col-md-4 btn btn-default button" ui-sref="products" href="#/products">continue shopping</button>
     <div class="col-md-1"></div>
     <div class="col-md-5 cart-totals">
-      <div class="cart-subtotal">
+      <div class="cart-subtotals">
         <div>subtotal</div>
         <div>{{ getSubtotal() | currency }}</div>
       </div>
       <div class="cart-shipping">
         <div>shipping</div>
-        <div>$0.00</div>
+        <div>tbd</div>
       </div>
       <div class="cart-grandtotal">
         <div>grand total</div>
-        <!-- <div>{{  }}</div> -->
+        <div>{{ getTotal() | currency }}</div>
       </div>
 
     </div>
     <div class="col-md-1"></div>
   </div>
+
 </div>
+
 <div class="cart-empty" ng-if="cart.length == 0">
   <h3>your cart is currently empty!</h3>
   <div class="row">
