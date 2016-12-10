@@ -26,10 +26,10 @@ angular.module('app').service('cartSvc', function ($http, $q, $localStorage) {
 
 // remove an item from the cart
   this.removeItem = (item, cart) => {
-    let updatedCart = cart.filter(product => {
+    this.cart = cart.filter(product => {
       return product.product_id != item.product_id
     });
-    $localStorage.cart = updatedCart;
-    return updatedCart;
+    $localStorage.cart = this.cart;
+    return this.cart;
   }
 });

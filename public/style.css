@@ -77,7 +77,7 @@ body {
   width: 100%;
   /*top: 68px;*/
   height: 100vh;
-  background-image: url(images/product-images/new3.jpg);
+  background-image: url(https://s3-us-west-2.amazonaws.com/thecandyblogger/new3.jpg);
   background-size: cover;
   background-position: center center;
   /*overflow: hidden;*/
@@ -180,35 +180,35 @@ body {
 }
 
 .vs9 {
-  background-image: url(images/candystripe/vs9.jpg);
+  background-image: url(https://s3-us-west-2.amazonaws.com/thecandyblogger/VS9.jpg);
 }
 
 .vs13 {
-  background-image: url(images/candystripe/vs13.jpg);
+  background-image: url(https://s3-us-west-2.amazonaws.com/thecandyblogger/VS13.jpg);
 }
 
 .vs31 {
-  background-image: url(images/candystripe/vs31.jpg);
+  background-image: url(https://s3-us-west-2.amazonaws.com/thecandyblogger/VS31.JPG);
 }
 
 .vs33 {
-  background-image: url(images/candystripe/vs33.jpg);
+  background-image: url(https://s3-us-west-2.amazonaws.com/thecandyblogger/VS33.jpg);
 }
 
 .vs28 {
-  background-image: url(images/candystripe/vs28.jpg);
+  background-image: url(https://s3-us-west-2.amazonaws.com/thecandyblogger/VS28.JPG);
 }
 
 .vs17 {
-  background-image: url(images/candystripe/vs17.jpg);
+  background-image: url(https://s3-us-west-2.amazonaws.com/thecandyblogger/VS17.JPG);
 }
 
 .vs23 {
-  background-image: url(images/candystripe/vs23.jpg);
+  background-image: url(https://s3-us-west-2.amazonaws.com/thecandyblogger/VS23.jpg);
 }
 
 .vs3 {
-  background-image: url(images/candystripe/vs3.jpg);
+  background-image: url(https://s3-us-west-2.amazonaws.com/thecandyblogger/VS3.JPG);
 }
 
 .top-hero > h1 {
