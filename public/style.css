@@ -9,22 +9,24 @@ html, body {
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 100%;
   min-height: 100vh;
   /*width: 100vw;*/
-  /*top: 68px;*/
   font-family: 'Josefin Slab', serif;
   font-size: 18px;
+  /*position: relative;*/
+  /*min-height: 100vh;*/
+  display: flex;
+  flex-direction: column;
 }
 
 [ng-click], [ui-sref] {
   cursor: pointer;
 }
 
-/*.container {
-  padding: 0px;
-  left: 0;
-  right: 0;
+/*i[class^="icon-"]:before {
+	display: inline-block;
+	text-decoration: none;
 }*/
 
 .page-header {
@@ -108,6 +110,10 @@ body {
   margin-top: 40px;
 }
 
+.main {
+  flex: 1;
+}
+
 footer {
   background-color: rgba(228, 237, 242, 0.75);
   width: 100%;
@@ -117,11 +123,12 @@ footer {
   justify-content: center;
   align-items: center;
   clear: both;
-  position: absolute;
-  margin-top: -100px;
-  right: 0;
+  position: relative;
+  /*margin-top: -100px;*/
+  /*right: 0;*/
   bottom: 0;
-  left: 0;
+  /*left: 0;*/
+  /*z-index: 10;*/
 }
 
 .footer {
@@ -151,12 +158,36 @@ footer {
   margin: 0 auto;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .social-icons:hover {
   color: rgba(149, 237, 226, 0.75);
 }
 
 .social-icons * {
   padding: 5px;
+}
+
+.facebook {
+  color: #E8E59A;
+}
+
+.instagram {
+  color: #C96593;
+}
+
+.twitter {
+  color: #76AFB7;
+}
+
+.pinterest {
+  color: #2A6580;
+}
+
+.envelope {
+  color: #94335C;
 }
 
 .copyright-symbol {
@@ -393,4 +424,36 @@ footer {
 
 .about-copy {
 
+}
+
+.press-container {
+  margin: 30px 10% 30px 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.press-image {
+  max-width: 600px;
+  max-height: 600px;
+  margin-bottom: 30px;
+}
+
+/*.press-iframe {
+  max-width: 600px;
+  max-height: 758px;
+  background: rgb(255, 255, 255);
+  border: 0px;
+  margin: 1px;
+  max-width: 658px;
+  width: calc(100% - 2px);
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 1px 0px, rgba(0, 0, 0, 0.14902) 0px 1px 10px 0px;
+  display: block;
+  padding: 0px;
+}*/
+
+.press-copy {
+  max-width: 600px;
 }
