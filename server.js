@@ -18,10 +18,10 @@ let port = process.env.PORT || 80;
 
     // setup e-mail data with unicode symbols
 let mailOptions = {
-    from: from, // sender address
+    from: '', // sender address
     to: 'jason.raymond.sanders@gmail.com', // list of receivers
     subject: 'Hello ✔', // Subject line
-    text: text, // plaintext body
+    text: '', // plaintext body
     html: '<b>Hello world ?</b>' // html body
 };
 
