@@ -32,7 +32,9 @@ angular.module('app', ['ui.router', 'ngStorage'])
       })
       .state('contact', {
         url: '/contact',
-        templateUrl: '../views/contact.html'
+        templateUrl: '../views/contact.html',
+        controller: 'contactCtrl',
+        controllerAs: 'vm',
       })
       .state('press', {
         url: '/press',

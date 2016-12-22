@@ -18,3 +18,12 @@ To-dos:
 - Mimic some of talon's homepage experience
 - Mobile views on all pages
 - Make hover color match the stripes per ui-view
+
+
+1. Implement Stripe
+2. Create a working contact page
+3. Add the blog
+4. Add additional stuff to the home page
+5. Cart header quantity
+6. Product page quantity added to cart
+7. Responsive content to all pages

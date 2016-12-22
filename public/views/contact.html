@@ -3,5 +3,10 @@
 </div>
 
 <div class="about-container">
+  <div class="input-group">
+  <span class="input-group-addon" ng-click="sendMail(mailOptions)" id="sizing-addon2">Send</span>
+  <input type="text" class="form-control" ng-model="mailOptions.from" placeholder="email" aria-describedby="sizing-addon2">
+  <input type="text" class="form-control" ng-model="mailOptions.text" placeholder="text" aria-describedby="sizing-addon2">
+</div>
   Question? Inquiry? <a href="mailto:jas.sanders@gmail.com">Shoot me an email!</a>
 </div>

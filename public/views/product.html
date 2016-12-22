@@ -4,7 +4,7 @@
 <div class="container-fluid">
   <div class="row top-margin">
     <div class="col-md-1"></div>
-    <div class="col-md-6">
+    <div class="col-md-6 productpage-image">
       <img class="productpage-image" ng-src="{{ product.image }}" alt="{{ product.name }}"/>
     </div>
     <div class="col-md-4 product-name">
@@ -13,8 +13,11 @@
         {{ product.description }}
       </p>
       <div class="price-button row">
-        <button class="btn btn-default button add-to-cart col-lg-8 col-xs-8" type="button" ng-click="addToCart(product)">add to cart</button>
-        <h2 class="product-price col-lg-4 col-xs-4">{{ product.price }}</h2>
+        <div class="productpage-buttons row col-md-8">
+          <button class="btn btn-default button add-to-cart col-lg-12 col-md-12 col-xs-12" type="button" ng-click="addToCart(product)">add to cart</button>
+          <button class="col-md-12 btn btn-default button" ui-sref="products" href="#/products">continue shopping</button>
+        </div>
+        <h2 class="product-price col-md-4">{{ product.price | currency }}</h2>
       </div>
     </div>
     <div class="col-md-1"></div>
