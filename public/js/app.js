@@ -50,6 +50,12 @@ angular.module('app', ['ui.router', 'ngStorage'])
         controller: 'cartCtrl',
         controllerAs: 'vm'
       })
+      .state('checkout', {
+        url: '/checkout',
+        templateURL: '..views/checkout.html',
+        // controller: 'checkoutCtrl',
+        // controllerAs: 'vm'
+      })
 
     $urlRouterProvider
       .otherwise('/');

@@ -17,21 +17,21 @@ let mainCtrl = require('./mainCtrl');
 let port = process.env.PORT || 80;
 
     // setup e-mail data with unicode symbols
-let mailOptions = {
-    from: '', // sender address
-    to: 'jason.raymond.sanders@gmail.com', // list of receivers
-    subject: 'Hello ✔', // Subject line
-    text: '', // plaintext body
-    html: '<b>Hello world ?</b>' // html body
-};
+// let mailOptions = {
+//     from: '', // sender address
+//     to: 'jason.raymond.sanders@gmail.com', // list of receivers
+//     subject: 'Hello ✔', // Subject line
+//     text: '', // plaintext body
+//     html: '<b>Hello world ?</b>' // html body
+// };
 
 // send mail with defined transport object
-transporter.sendMail(mailOptions, function(error, info){
-    if(error){
-        return console.log(error);
-    }
-    console.log('Message sent: ' + info.response);
-});
+// transporter.sendMail(mailOptions, function(error, info){
+//     if(error){
+//         return console.log(error);
+//     }
+//     console.log('Message sent: ' + info.response);
+// });
 
 app.use(bodyParser.json());
 app.use(cors());
